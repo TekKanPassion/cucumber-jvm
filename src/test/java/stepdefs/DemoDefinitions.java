@@ -1,11 +1,16 @@
 package stepdefs;
 
 
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxBinary;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxDriver.SystemProperty;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -24,8 +29,15 @@ public class DemoDefinitions {
 	public void i_run_it_within_my_ide() {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("at when");
-
-		WebDriver driver;
+		
+		//File pathToBinary = new File("/opt/firefox/firefox");
+		//FirefoxBinary ffBinary = new FirefoxBinary(pathToBinary);
+		//FirefoxProfile firefoxProfile = new FirefoxProfile();
+		System.setProperty("webdriver.firefox.bin", "/opt/firefox/firefox");
+		
+		WebDriver driver = new FirefoxDriver();
+		System.out.println("BROWSER_BINARY location is "+SystemProperty.BROWSER_BINARY);
+		//WebDriver driver;
 		System.setProperty("webdriver.gecko.driver", "C:geckodriver.exe");
 		driver = new FirefoxDriver();
 		
