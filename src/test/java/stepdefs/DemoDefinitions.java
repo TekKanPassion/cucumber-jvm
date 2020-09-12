@@ -25,14 +25,15 @@ public class DemoDefinitions {
 	    // Write code here that turns the phrase above into concrete actions
 		System.out.println("at when");
 
-		/*WebDriver driver;
+		WebDriver driver;
 		System.setProperty("webdriver.gecko.driver", "C:geckodriver.exe");
 		driver = new FirefoxDriver();
-		*/
+		
+		/*
 		System.setProperty("webdriver.chrome.driver", "C:chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 	    driver.get("http://www.google.com/");
-		
+		*/
 	    
 	    
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
